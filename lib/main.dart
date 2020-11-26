@@ -62,12 +62,21 @@ class MyHomePage extends StatelessWidget {
                       ),
                       child: Text(
                         tx.amount.toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.blue,
+                        ),
                       ),
                     ),
                     Column(
                       children: <Widget>[
-                        Text(tx.id),
-                        Text(tx.title),
+                        Text(
+                          tx.id,
+                        ),
+                        Text(
+                          tx.title,
+                        ),
                       ],
                     )
                   ],
