@@ -52,7 +52,11 @@ class MyHomePage extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Container(
-                      child: Text(tx.amount.toString()),
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(border: Border.all()),
+                      child: Text(
+                        tx.amount.toString(),
+                      ),
                     ),
                     Column(
                       children: <Widget>[
