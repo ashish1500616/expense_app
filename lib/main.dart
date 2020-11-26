@@ -70,12 +70,18 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          tx.id,
+                          tx.title,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         Text(
-                          tx.title,
+                          tx.date.toString(),
+                          style: TextStyle(color: Colors.grey),
                         ),
                       ],
                     )
