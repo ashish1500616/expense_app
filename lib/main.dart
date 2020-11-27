@@ -1,5 +1,3 @@
-import 'package:expense/widgets/new_transaction.dart';
-import 'package:expense/widgets/transaction_list.dart';
 import 'package:expense/widgets/user_transaction.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +21,12 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Expense App'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {},
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -39,6 +43,13 @@ class MyHomePage extends StatelessWidget {
             UserTransactions(),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+
+        },
       ),
     );
   }
