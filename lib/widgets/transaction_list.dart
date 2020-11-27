@@ -16,7 +16,8 @@ class TransactionList extends StatelessWidget {
           return Card(
             child: Row(
               children: <Widget>[
-                Container( // Expense Amount.
+                Container(
+                  // Expense Amount.
                   margin: EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 15,
@@ -29,7 +30,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    '\$${transactions[index].amount}',
+                    '\$${transactions[index].amount.toStringAsFixed(2)}',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -37,7 +38,8 @@ class TransactionList extends StatelessWidget {
                     ),
                   ),
                 ),
-                Column( // Expense Information .
+                Column(
+                  // Expense Information .
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
