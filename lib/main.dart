@@ -37,7 +37,7 @@ class MyHomePage extends StatelessWidget {
           title: Text('Expense App'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Card(
@@ -47,6 +47,29 @@ class MyHomePage extends StatelessWidget {
                 width: double.infinity,
               ),
             ),
+            Card(
+                elevation: 5,
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      TextField(
+                        decoration:
+                            InputDecoration(labelText: "Expense Title."),
+                      ),
+                      TextField(
+                        decoration:
+                            InputDecoration(labelText: "Expense Ammount."),
+                      ),
+                      FlatButton(
+                        child: Text("Add Transaction"),
+                        textColor: Colors.blue,
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                )),
             Column(
                 children: transactions.map((tx) {
               return Card(
@@ -82,7 +105,7 @@ class MyHomePage extends StatelessWidget {
                         ),
                         Text(
                           // DateFormat('yyyy-MM-dd').format(tx.date),
-                          DateFormat.yMd().format(tx.date);
+                          DateFormat.yMd().format(tx.date),
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
